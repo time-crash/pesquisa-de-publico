@@ -9,9 +9,17 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 	</head>
-	<body class='container'>
-		<section class="row" id='thisis'></section>
-		<section class="row" id='chars'>
+	<body>
+		<section id='thisis'>
+			<div>
+				<h1>Esse é Time Crash!</h1>
+				<img src='https://placehold.it/300' />
+			</div>
+			<div class='goto' onclick='go_to("#chars")'>
+				<i class='fa fa-3x fa-inverse fa-angle-down'></i>
+			</div>
+		</section>
+		<section id='chars'>
 			<div class="charCarousel">
 				<div>
 					<img class='img-slide' src='https://placehold.it/400x500' />
@@ -30,8 +38,15 @@
 					</div>
 				</div>
 			</div>
+			<div class='goto' onclick='go_to("#bio")'>
+				<i class='fa fa-3x fa-inverse fa-angle-down'></i>
+			</div>
 		</section>
-		<section class="row" id='bio'></section>
+		<section id='bio'>
+			<div class='goto' onclick='go_to("#thisis")'>
+				<i class='fa fa-3x fa-inverse fa-angle-up'></i>
+			</div>
+		</section>
 		<!--Javascript--><!--{{{-->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

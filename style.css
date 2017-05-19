@@ -1,7 +1,18 @@
+@import url(fontawesome/font-awesome.min.css);
+body {
+  margin: 0; }
+
+section {
+  height: 100vh; }
+
+.goto {
+  background-color: #003874;
+  text-align: center; }
+
 .slide-content {
   background: linear-gradient(0, rgba(10, 10, 10, 0.4), transparent); }
 
 .img-slide {
-  width: 100vmin; }
+  width: 30vmin; }
 
 /*# sourceMappingURL=style.css.map */

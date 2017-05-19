@@ -7,3 +7,9 @@ $(document).ready(function(){
 		autoplaySpeed: 3000,
 	});
 });
+
+function go_to(target){
+	$('html,body').animate({
+		scrollTop: $(target).offset().top},
+		'slow');
+}

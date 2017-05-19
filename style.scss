@@ -1,7 +1,28 @@
+@import 'fontawesome/font-awesome.min.css';
+
+$marine: #003874;
+$orange: #f47421;
+$cyan: #7fc6c3;
+$pink: #e094bf;
+$blue: #255791;
+
+body{
+	margin: 0;
+}
+
+section {
+	height: 100vh;
+}
+
+.goto{
+	background-color: $marine;
+	text-align: center;
+}
+
 .slide-content{
 	background: linear-gradient(0, rgba(10,10,10,0.4), rgba(0,0,0,0));
 }
 
 .img-slide{
-	width: 100vmin;
+	width: 30vmin;
 }

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 body {
   font-family: 'Open Sans', sans-serif;
-  background-image: url("imgs/shards.png"), linear-gradient(0, #FFEEE2, #fff);
+  background-image: url("imgs/shardsSmall.png"), linear-gradient(0, #FFEEE2, #fff);
   background-attachment: fixed;
   background-position: left bottom;
   background-size: contain;
@@ -11,10 +11,10 @@ body {
   margin: 0; }
 
 section {
-  height: 100vh; }
+  min-height: 100vh; }
 
 .content {
-  height: calc(100vh - 3em); }
+  min-height: calc(100vh - 3em); }
   .content h1 {
     margin-top: 0;
     margin-left: 0.83em;
@@ -29,7 +29,7 @@ section {
   width: 80%;
   border-radius: 1.5em;
   background-color: #255791;
-  color: #ddd;
+  color: white;
   text-align: center;
   font-weight: bold;
   line-height: 2em; }

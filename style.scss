@@ -14,7 +14,7 @@ $white: #ddd;
 
 body{
 	font-family: 'Open Sans', sans-serif;
-	background-image: url('imgs/shards.png'), linear-gradient(0, #FFEEE2, #fff);
+	background-image: url('imgs/shardsSmall.png'), linear-gradient(0, #FFEEE2, #fff);
 	background-attachment: fixed;
 	background-position: left bottom;
 	background-size: contain;
@@ -24,11 +24,11 @@ body{
 }
 
 section {
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .content {
-	height: calc(100vh - 3em);
+	min-height: calc(100vh - 3em);
 
 	h1 {
 		margin-top: 0;
@@ -46,7 +46,7 @@ section {
 	width: 80%;
 	border-radius: 1.5em;
 	background-color: $blue;
-	color: $white;
+	color: white;
 	text-align: center;
 	font-weight: bold;
 	line-height: 2em;

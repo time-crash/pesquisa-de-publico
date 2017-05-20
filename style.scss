@@ -1,4 +1,5 @@
 @import 'fontawesome/font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 $marine: #003874;
 $orange: #f47421;
@@ -7,6 +8,13 @@ $pink: #e094bf;
 $blue: #255791;
 
 body{
+	font-family: 'Open Sans', sans-serif;
+	background-image: url('imgs/shards.png'), linear-gradient(0, #FFEEE2, #fff);
+	background-attachment: fixed;
+	background-position: left bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: #222;
 	margin: 0;
 }
 
@@ -14,7 +22,27 @@ section {
 	height: 100vh;
 }
 
+.content {
+	height: calc(100vh - 3em);
+
+	h1 {
+		margin-top: 0;
+		margin-left: 0.83em;
+		padding-top: 0.83em;
+	}
+}
+
+.responsive {
+	max-width: 80vw;
+}
+
+.center {
+	display: block;
+	margin: 0 auto;
+}
+
 .goto{
+	height: 3em;
 	background-color: $marine;
 	text-align: center;
 }

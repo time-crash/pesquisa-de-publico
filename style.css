@@ -20,8 +20,30 @@ section {
     margin-left: 0.83em;
     padding-top: 0.83em; }
 
+.lead-title {
+  display: block;
+  margin: 0 auto;
+  padding: 0.6em;
+  padding-left: 1em;
+  height: 2em;
+  width: 80%;
+  border-radius: 1.5em;
+  background-color: #255791;
+  color: #ddd;
+  text-align: center;
+  font-weight: bold;
+  line-height: 2em; }
+  .lead-title .fa {
+    float: left;
+    margin-right: -1em; }
+
+.lead p {
+  margin: .5em 10%;
+  font-weight: bold;
+  line-height: 1.5em; }
+
 .responsive {
-  max-width: 80vw; }
+  max-width: 50vw; }
 
 .center {
   display: block;

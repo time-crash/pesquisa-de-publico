@@ -7,6 +7,11 @@ $cyan: #7fc6c3;
 $pink: #e094bf;
 $blue: #255791;
 
+$lightblue: rgba(77,199,196, 1);
+
+$black: #222;
+$white: #ddd;
+
 body{
 	font-family: 'Open Sans', sans-serif;
 	background-image: url('imgs/shards.png'), linear-gradient(0, #FFEEE2, #fff);
@@ -14,7 +19,7 @@ body{
 	background-position: left bottom;
 	background-size: contain;
 	background-repeat: no-repeat;
-	color: #222;
+	color: $black;
 	margin: 0;
 }
 
@@ -32,8 +37,34 @@ section {
 	}
 }
 
+.lead-title {
+	display: block;
+	margin: 0 auto;
+	padding: 0.6em;
+	padding-left: 1em;
+	height: 2em;
+	width: 80%;
+	border-radius: 1.5em;
+	background-color: $blue;
+	color: $white;
+	text-align: center;
+	font-weight: bold;
+	line-height: 2em;
+
+	.fa {
+		float: left;
+		margin-right: -1em;
+	}
+}
+
+.lead p {
+	margin: .5em 10%;
+	font-weight: bold;
+	line-height: 1.5em;
+}
+
 .responsive {
-	max-width: 80vw;
+	max-width: 50vw;
 }
 
 .center {

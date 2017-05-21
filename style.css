@@ -62,6 +62,17 @@ section {
   height: 3em;
   background-color: #255791;
   text-align: center; }
+  .goto span {
+    display: block;
+    margin: 0 auto;
+    height: inherit;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    line-height: 3em; }
+    .goto span .fa {
+      float: left;
+      margin-left: .5em; }
 
 .slide-content {
   background: linear-gradient(0, rgba(10, 10, 10, 0.4), transparent); }

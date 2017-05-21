@@ -87,6 +87,21 @@ section {
 	height: 3em;
 	background-color: $blue;
 	text-align: center;
+
+	span{
+		display: block;
+		margin: 0 auto;
+		height: inherit;
+		color: white;
+		text-align: center;
+		font-weight: bold;
+		line-height: 3em;
+
+		.fa {
+			float: left;
+			margin-left: .5em;
+		}
+	}
 }
 
 .slide-content{

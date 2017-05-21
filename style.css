@@ -1,14 +1,23 @@
 @import url(fontawesome/font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-image: url("imgs/shardsSmall.png"), linear-gradient(0, #FFEEE2, #fff);
+.shardbg, body {
   background-attachment: fixed;
   background-position: left bottom;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(0, #FFEEE2, #fff);
   color: #222;
   margin: 0; }
+
+.shardbg {
+  z-index: -10;
+  position: fixed;
+  background-image: url("imgs/shardsSmall.png");
+  width: 100vw;
+  height: 100vh; }
 
 section {
   min-height: 100vh; }

@@ -2,47 +2,47 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
-inoremap <Plug>(emmet-anchorize-summary) =emmet#util#closePopup()=emmet#anchorizeURL(1)
-inoremap <Plug>(emmet-anchorize-url) =emmet#util#closePopup()=emmet#anchorizeURL(0)
-inoremap <Plug>(emmet-remove-tag) =emmet#util#closePopup()=emmet#removeTag()
-inoremap <Plug>(emmet-split-join-tag) :call emmet#splitJoinTag()
-inoremap <Plug>(emmet-toggle-comment) =emmet#util#closePopup()=emmet#toggleComment()
-inoremap <Plug>(emmet-image-size) =emmet#util#closePopup()=emmet#imageSize()
-inoremap <Plug>(emmet-move-prev-item) :call emmet#moveNextPrevItem(1)
-inoremap <Plug>(emmet-move-next-item) :call emmet#moveNextPrevItem(0)
-inoremap <Plug>(emmet-move-prev) :call emmet#moveNextPrev(1)
-inoremap <Plug>(emmet-move-next) :call emmet#moveNextPrev(0)
-inoremap <Plug>(emmet-balance-tag-outword) :call emmet#balanceTag(-1)
-inoremap <Plug>(emmet-balance-tag-inward) :call emmet#balanceTag(1)
-inoremap <Plug>(emmet-update-tag) =emmet#util#closePopup()=emmet#updateTag()
-inoremap <Plug>(emmet-expand-word) =emmet#util#closePopup()=emmet#expandAbbr(1,"")
-inoremap <Plug>(emmet-expand-abbr) =emmet#util#closePopup()=emmet#expandAbbr(0,"")
-inoremap <silent> <Plug>(table-mode-tableize) |:call tablemode#TableizeInsertMode()a
-inoremap <silent> <C-Tab> =UltiSnips#ListSnippets()
 inoremap <silent> <Nul> =UltiSnips#ExpandSnippet()
+inoremap <silent> <C-Tab> =UltiSnips#ListSnippets()
+inoremap <Plug>(emmet-expand-abbr) =emmet#util#closePopup()=emmet#expandAbbr(0,"")
+inoremap <Plug>(emmet-expand-word) =emmet#util#closePopup()=emmet#expandAbbr(1,"")
+inoremap <Plug>(emmet-update-tag) =emmet#util#closePopup()=emmet#updateTag()
+inoremap <Plug>(emmet-balance-tag-inward) :call emmet#balanceTag(1)
+inoremap <Plug>(emmet-balance-tag-outword) :call emmet#balanceTag(-1)
+inoremap <Plug>(emmet-move-next) :call emmet#moveNextPrev(0)
+inoremap <Plug>(emmet-move-prev) :call emmet#moveNextPrev(1)
+inoremap <Plug>(emmet-move-next-item) :call emmet#moveNextPrevItem(0)
+inoremap <Plug>(emmet-move-prev-item) :call emmet#moveNextPrevItem(1)
+inoremap <Plug>(emmet-image-size) =emmet#util#closePopup()=emmet#imageSize()
+inoremap <Plug>(emmet-toggle-comment) =emmet#util#closePopup()=emmet#toggleComment()
+inoremap <Plug>(emmet-split-join-tag) :call emmet#splitJoinTag()
+inoremap <Plug>(emmet-remove-tag) =emmet#util#closePopup()=emmet#removeTag()
+inoremap <Plug>(emmet-anchorize-url) =emmet#util#closePopup()=emmet#anchorizeURL(0)
+inoremap <Plug>(emmet-anchorize-summary) =emmet#util#closePopup()=emmet#anchorizeURL(1)
+inoremap <silent> <Plug>(table-mode-tableize) |:call tablemode#TableizeInsertMode()a
 inoremap <silent> <Plug>NERDCommenterInsert  <BS>:call NERDComment('i', "insert")
-vmap c <Plug>(emmet-code-pretty)
-vmap m <Plug>(emmet-merge-lines)
-nmap A <Plug>(emmet-anchorize-summary)
-nmap a <Plug>(emmet-anchorize-url)
-nmap k <Plug>(emmet-remove-tag)
-nmap j <Plug>(emmet-split-join-tag)
-nmap / <Plug>(emmet-toggle-comment)
-nmap i <Plug>(emmet-image-size)
-nmap N <Plug>(emmet-move-prev)
-nmap n <Plug>(emmet-move-next)
-vmap D <Plug>(emmet-balance-tag-outword)
-nmap D <Plug>(emmet-balance-tag-outword)
-vmap d <Plug>(emmet-balance-tag-inward)
-nmap d <Plug>(emmet-balance-tag-inward)
-nmap u <Plug>(emmet-update-tag)
-nmap ; <Plug>(emmet-expand-word)
-vmap e <Plug>(emmet-expand-abbr)
 nmap e <Plug>(emmet-expand-abbr)
+vmap e <Plug>(emmet-expand-abbr)
+nmap ; <Plug>(emmet-expand-word)
+nmap u <Plug>(emmet-update-tag)
+nmap d <Plug>(emmet-balance-tag-inward)
+vmap d <Plug>(emmet-balance-tag-inward)
+nmap D <Plug>(emmet-balance-tag-outword)
+vmap D <Plug>(emmet-balance-tag-outword)
+nmap n <Plug>(emmet-move-next)
+nmap N <Plug>(emmet-move-prev)
+nmap i <Plug>(emmet-image-size)
+nmap / <Plug>(emmet-toggle-comment)
+nmap j <Plug>(emmet-split-join-tag)
+nmap k <Plug>(emmet-remove-tag)
+nmap a <Plug>(emmet-anchorize-url)
+nmap A <Plug>(emmet-anchorize-summary)
+vmap m <Plug>(emmet-merge-lines)
+vmap c <Plug>(emmet-code-pretty)
 noremap  2
-snoremap <silent>  c
-nnoremap  :cp
 xnoremap  :cp
+nnoremap  :cp
+snoremap <silent>  c
 onoremap  :cp
 noremap <NL> :bp
 noremap  :bn
@@ -50,6 +50,7 @@ noremap  :cn
 nnoremap <silent>  :CtrlP
 noremap  2
 snoremap  "_c
+nnoremap  l $
 nmap  ? <Plug>MarkSearchAnyPrev
 nmap  / <Plug>MarkSearchAnyNext
 nmap  # <Plug>MarkSearchCurrentPrev
@@ -111,7 +112,6 @@ nnoremap  K <Up>
 nnoremap  J <Down>
 nnoremap  H <Left>
 vnoremap  l $<Left>
-nnoremap  l $
 onoremap  l $
 noremap  h ^
 noremap  cw 1z=
@@ -150,28 +150,34 @@ nmap yS <Plug>YSurround
 nmap ys <Plug>Ysurround
 vnoremap ~ y:call setreg('', TwiddleCase(@"), getregtype(''))gv""Pgvl
 nnoremap ~ g~
+nnoremap <SNR>17_: :=v:count ? v:count : ''
+snoremap <silent> <Nul> :call UltiSnips#ExpandSnippet()
+xnoremap <silent> <Nul> :call UltiSnips#SaveLastVisualSelection()gvs
+snoremap <silent> <C-Tab> :call UltiSnips#ListSnippets()
+snoremap <silent> <BS> c
+snoremap <silent> <Del> c
+nnoremap <Plug>(emmet-expand-abbr) :call emmet#expandAbbr(3,"")
+vnoremap <Plug>(emmet-expand-abbr) :call emmet#expandAbbr(2,"")
+nnoremap <Plug>(emmet-expand-word) :call emmet#expandAbbr(1,"")
+nnoremap <Plug>(emmet-update-tag) :call emmet#updateTag()
+nnoremap <Plug>(emmet-balance-tag-inward) :call emmet#balanceTag(1)
+vnoremap <Plug>(emmet-balance-tag-inward) :call emmet#balanceTag(2)
+nnoremap <Plug>(emmet-balance-tag-outword) :call emmet#balanceTag(-1)
+vnoremap <Plug>(emmet-balance-tag-outword) :call emmet#balanceTag(-2)
+nnoremap <Plug>(emmet-move-next) :call emmet#moveNextPrev(0)
+nnoremap <Plug>(emmet-move-prev) :call emmet#moveNextPrev(1)
+nnoremap <Plug>(emmet-move-next-item) :call emmet#moveNextPrevItem(0)
+nnoremap <Plug>(emmet-move-prev-item) :call emmet#moveNextPrevItem(1)
+nnoremap <Plug>(emmet-image-size) :call emmet#imageSize()
+nnoremap <Plug>(emmet-toggle-comment) :call emmet#toggleComment()
+nnoremap <Plug>(emmet-split-join-tag) :call emmet#splitJoinTag()
+nnoremap <Plug>(emmet-remove-tag) :call emmet#removeTag()
+nnoremap <Plug>(emmet-anchorize-url) :call emmet#anchorizeURL(0)
+nnoremap <Plug>(emmet-anchorize-summary) :call emmet#anchorizeURL(1)
+vnoremap <Plug>(emmet-merge-lines) :call emmet#mergeLines()
+vnoremap <Plug>(emmet-code-pretty) :call emmet#codePretty()
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
-vnoremap <Plug>(emmet-code-pretty) :call emmet#codePretty()
-vnoremap <Plug>(emmet-merge-lines) :call emmet#mergeLines()
-nnoremap <Plug>(emmet-anchorize-summary) :call emmet#anchorizeURL(1)
-nnoremap <Plug>(emmet-anchorize-url) :call emmet#anchorizeURL(0)
-nnoremap <Plug>(emmet-remove-tag) :call emmet#removeTag()
-nnoremap <Plug>(emmet-split-join-tag) :call emmet#splitJoinTag()
-nnoremap <Plug>(emmet-toggle-comment) :call emmet#toggleComment()
-nnoremap <Plug>(emmet-image-size) :call emmet#imageSize()
-nnoremap <Plug>(emmet-move-prev-item) :call emmet#moveNextPrevItem(1)
-nnoremap <Plug>(emmet-move-next-item) :call emmet#moveNextPrevItem(0)
-nnoremap <Plug>(emmet-move-prev) :call emmet#moveNextPrev(1)
-nnoremap <Plug>(emmet-move-next) :call emmet#moveNextPrev(0)
-vnoremap <Plug>(emmet-balance-tag-outword) :call emmet#balanceTag(-2)
-nnoremap <Plug>(emmet-balance-tag-outword) :call emmet#balanceTag(-1)
-vnoremap <Plug>(emmet-balance-tag-inward) :call emmet#balanceTag(2)
-nnoremap <Plug>(emmet-balance-tag-inward) :call emmet#balanceTag(1)
-nnoremap <Plug>(emmet-update-tag) :call emmet#updateTag()
-nnoremap <Plug>(emmet-expand-word) :call emmet#expandAbbr(1,"")
-vnoremap <Plug>(emmet-expand-abbr) :call emmet#expandAbbr(2,"")
-nnoremap <Plug>(emmet-expand-abbr) :call emmet#expandAbbr(3,"")
 nmap <C-k9> <Plug>MarkSearchGroup9Prev
 nnoremap <silent> <Plug>MarkSearchGroup9Prev :call mark#SearchGroupMark(9, v:count1, 1, 1)
 nmap <k9> <Plug>MarkSearchGroup9Next
@@ -249,11 +255,6 @@ nnoremap <silent> <Plug>(table-mode-tableize) :Tableize
 nmap <silent> <Plug>RestoreWinPosn :call RestoreWinPosn()
 nmap <silent> <Plug>SaveWinPosn :call SaveWinPosn()
 nnoremap <silent> <Plug>SurroundRepeat .
-snoremap <silent> <Del> c
-snoremap <silent> <BS> c
-snoremap <silent> <C-Tab> :call UltiSnips#ListSnippets()
-xnoremap <silent> <Nul> :call UltiSnips#SaveLastVisualSelection()gvs
-snoremap <silent> <Nul> :call UltiSnips#ExpandSnippet()
 xnoremap <silent> <Plug>NERDCommenterUncomment :call NERDComment("x", "Uncomment")
 nnoremap <silent> <Plug>NERDCommenterUncomment :call NERDComment("n", "Uncomment")
 xnoremap <silent> <Plug>NERDCommenterAlignBoth :call NERDComment("x", "AlignBoth")
@@ -276,7 +277,7 @@ xnoremap <silent> <Plug>NERDCommenterToggle :call NERDComment("x", "Toggle")
 nnoremap <silent> <Plug>NERDCommenterToggle :call NERDComment("n", "Toggle")
 xnoremap <silent> <Plug>NERDCommenterComment :call NERDComment("x", "Comment")
 nnoremap <silent> <Plug>NERDCommenterComment :call NERDComment("n", "Comment")
-nnoremap <SNR>17_: :=v:count ? v:count : ''
+nnoremap <SNR>16_: :=v:count ? v:count : ''
 noremap <F8> :so $MYVIMRC
 map <S-F12> :bd ~/.vimrc:bd ~/.plugins.vim
 map <F12> :tabe ~/.plugins.vim:vsplit $MYVIMRC
@@ -294,48 +295,48 @@ nnoremap <Right> >
 nnoremap <Left> <
 nnoremap <Down> -
 nnoremap <Up> +
-imap A <Plug>(emmet-anchorize-summary)
-imap a <Plug>(emmet-anchorize-url)
-imap k <Plug>(emmet-remove-tag)
-imap j <Plug>(emmet-split-join-tag)
-imap / <Plug>(emmet-toggle-comment)
-imap i <Plug>(emmet-image-size)
-imap N <Plug>(emmet-move-prev)
-imap n <Plug>(emmet-move-next)
-imap D <Plug>(emmet-balance-tag-outword)
-imap d <Plug>(emmet-balance-tag-inward)
-imap u <Plug>(emmet-update-tag)
-imap ; <Plug>(emmet-expand-word)
 imap e <Plug>(emmet-expand-abbr)
+imap ; <Plug>(emmet-expand-word)
+imap u <Plug>(emmet-update-tag)
+imap d <Plug>(emmet-balance-tag-inward)
+imap D <Plug>(emmet-balance-tag-outword)
+imap n <Plug>(emmet-move-next)
+imap N <Plug>(emmet-move-prev)
+imap i <Plug>(emmet-image-size)
+imap / <Plug>(emmet-toggle-comment)
+imap j <Plug>(emmet-split-join-tag)
+imap k <Plug>(emmet-remove-tag)
+imap a <Plug>(emmet-anchorize-url)
+imap A <Plug>(emmet-anchorize-summary)
 imap S <Plug>ISurround
 imap s <Plug>Isurround
 imap  <Plug>Isurround
 inoremap <expr> [200~ XTermPasteBegin()
-inoremap "" ""<Left>
+inoremap "" ""
 inoremap " "
-inoremap '' ''<Left>
+inoremap '' ''
 inoremap ((( (((
-inoremap (( ()<Left>
+inoremap (( ((
 inoremap , ,
-inoremap -- ->
-inoremap :: : ;<Left>
+inoremap -- --
+inoremap :: ::
 inoremap : :
-inoremap <! <!----><Left><Left><Left>
-inoremap <<  />
 inoremap <+ <?= ?><Left><Left><Left>
+inoremap <<  />
+inoremap <! <!----><Left><Left><Left>
 inoremap < <
 inoremap <? <?
 inoremap >>> >>>
 inoremap >> >>
 nnoremap √á :
 inoremap [ [
-inoremap [[ []<Left>
+inoremap [[ [[
 inoremap \\ \\
 inoremap __ __
 cnoremap jk 
 inoremap jk 
 inoremap {{{ {{{
-inoremap {{ {}O
+inoremap {{ {{
 abbr sptbr set spelllang=pt_br
 let &cpo=s:cpo_save
 unlet s:cpo_save
@@ -350,13 +351,10 @@ set completeopt=menu,preview,longest
 set directory=~/.vim-tmp//
 set fileencodings=ucs-bom,utf-8,default,latin1
 set foldlevelstart=1
-set guifont=UbuntuMono\ 13
-set guioptions=aegit
+set helplang=C.
 set hidden
 set history=1000
 set hlsearch
-set iminsert=0
-set imsearch=0
 set incsearch
 set laststatus=2
 set listchars=tab:‚îÜ\ ,eol:¬¨,trail:‚Ä¢,extends:‚ùØ,precedes:‚ùÆ
@@ -376,6 +374,7 @@ set smartcase
 set smartindent
 set smarttab
 set softtabstop=4
+set statusline=%<%F%h%m%r\ [%{&ff}]\ (%{strftime(\"%H:%M\ %d/%m/%Y\",getftime(expand(\"%:p\")))})%=%l,%c%V\ %P
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set tabline=%!airline#extensions#tabline#get()
 set tabstop=4
@@ -386,41 +385,36 @@ set wildmenu
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/Documents/dev-env/timeCrashDisplay
+cd /d/root/dev-env/timeCrashDisplay
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
 badd +16 index.html
-badd +13 script.js
-badd +12 style.scss
+badd +1 script.js
+badd +11 sass/style.scss
+badd +2 script/script.js
+badd +8 bio.html
+badd +1 css/style.css
 argglobal
 silent! argdel *
-edit style.scss
+edit sass/style.scss
 set splitbelow splitright
 wincmd _ | wincmd |
 split
 1wincmd k
-wincmd _ | wincmd |
-vsplit
-1wincmd h
-wincmd w
 wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 20 + 21) / 43)
-exe 'vert 1resize ' . ((&columns * 75 + 75) / 150)
-exe '2resize ' . ((&lines * 20 + 21) / 43)
-exe 'vert 2resize ' . ((&columns * 74 + 75) / 150)
-exe '3resize ' . ((&lines * 19 + 21) / 43)
+exe '1resize ' . ((&lines * 22 + 23) / 46)
+exe '2resize ' . ((&lines * 20 + 23) / 46)
 argglobal
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
 setlocal backupcopy=
-setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
@@ -510,7 +504,7 @@ setlocal softtabstop=4
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
-setlocal spelllang=pt_br
+setlocal spelllang=en
 setlocal statusline=%!airline#statusline(1)
 setlocal suffixesadd=.sass,.scss,.css
 setlocal swapfile
@@ -527,135 +521,13 @@ setlocal noundofile
 setlocal undolevels=-123456
 setlocal nowinfixheight
 setlocal nowinfixwidth
-setlocal nowrap
+setlocal wrap
 setlocal wrapmargin=0
-let s:l = 12 - ((9 * winheight(0) + 10) / 20)
+let s:l = 11 - ((10 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
-normal! 0
-wincmd w
-argglobal
-edit script.js
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal cindent
-setlocal cinkeys=0{,0},0),:,!^F,o,O,e,0]
-setlocal cinoptions=j1,J1
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
-setlocal commentstring=//%s
-setlocal complete=.,w,b
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'javascript'
-setlocal filetype=javascript
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=1
-setlocal foldmarker={{{,}}}
-set foldmethod=marker
-setlocal foldmethod=marker
-setlocal foldminlines=1
-set foldnestmax=10
-setlocal foldnestmax=10
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=croql
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=0
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-set linebreak
-setlocal linebreak
-setlocal nolisp
-setlocal lispwords=
-set list
-setlocal list
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=javascriptcomplete#CompleteJS
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-set relativenumber
-setlocal relativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=4
-setlocal noshortname
-setlocal smartindent
-setlocal softtabstop=4
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=pt_br
-setlocal statusline=%!airline#statusline(2)
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'javascript'
-setlocal syntax=javascript
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tags=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal nowrap
-setlocal wrapmargin=0
-let s:l = 13 - ((12 * winheight(0) + 10) / 20)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-13
+11
 normal! 0
 wincmd w
 argglobal
@@ -664,7 +536,6 @@ setlocal keymap=
 setlocal noarabic
 setlocal autoindent
 setlocal backupcopy=
-setlocal balloonexpr=
 setlocal nobinary
 setlocal nobreakindent
 setlocal breakindentopt=
@@ -713,8 +584,8 @@ setlocal formatexpr=
 setlocal formatoptions=tcq
 setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
 setlocal grepprg=
-setlocal iminsert=2
-setlocal imsearch=2
+setlocal iminsert=0
+setlocal imsearch=0
 setlocal include=
 setlocal includeexpr=
 setlocal indentexpr=HtmlIndent()
@@ -755,7 +626,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=pt_br
-setlocal statusline=%!airline#statusline(3)
+setlocal statusline=%!airline#statusline(2)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -773,18 +644,15 @@ setlocal nowinfixheight
 setlocal nowinfixwidth
 setlocal nowrap
 setlocal wrapmargin=0
-let s:l = 16 - ((9 * winheight(0) + 9) / 19)
+let s:l = 14 - ((13 * winheight(0) + 10) / 20)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-16
-normal! 0
+14
+normal! 081|
 wincmd w
-exe '1resize ' . ((&lines * 20 + 21) / 43)
-exe 'vert 1resize ' . ((&columns * 75 + 75) / 150)
-exe '2resize ' . ((&lines * 20 + 21) / 43)
-exe 'vert 2resize ' . ((&columns * 74 + 75) / 150)
-exe '3resize ' . ((&lines * 19 + 21) / 43)
+exe '1resize ' . ((&lines * 22 + 23) / 46)
+exe '2resize ' . ((&lines * 20 + 23) / 46)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

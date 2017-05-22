@@ -1,35 +1,80 @@
 @import url(fontawesome/font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+/* line 15, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
 .shardbg, body {
   background-attachment: fixed;
   background-position: left bottom;
   background-size: contain;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
+/* line 22, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
 body {
   font-family: 'Open Sans', sans-serif;
-  background-image: linear-gradient(0, #FFEEE2, #fff);
+  background-image: url("imgs/shardsSmall.png");
   color: #222;
-  margin: 0; }
+  margin: 0;
+}
 
+/* line 29, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
 .shardbg {
   z-index: -10;
   position: fixed;
-  background-image: url("imgs/shardsSmall.png");
+  background-image: linear-gradient(0, #FFEEE2, #fff);
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+}
 
+/* line 37, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
 section {
-  min-height: 100vh; }
+  min-height: 100vh;
+}
 
+/* line 41, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
 .content {
-  min-height: calc(100vh - 3em); }
-  .content h1 {
-    margin-top: 0;
-    margin-left: 0.83em;
-    padding-top: 0.83em; }
+  height: calc(100vh - 3em);
+}
 
-.lead-title {
+/* line 44, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
+.content h1 {
+  margin-top: 0;
+  margin-left: 0.83em;
+  padding-top: 0.83em;
+}
+
+/* line 51, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
+.goto {
+  height: 3em;
+  background-color: #255791;
+  text-align: center;
+}
+
+/* line 56, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
+.goto span {
+  display: block;
+  margin: 0 auto;
+  height: inherit;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  line-height: 3em;
+}
+
+/* line 65, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
+.goto span .fa {
+  float: left;
+  margin-left: .5em;
+}
+
+/* line 74, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
+.lead p {
+  margin: .5em 10%;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+/* line 80, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
+.lead .title {
   display: block;
   margin: 0 auto;
   padding: 0.6em;
@@ -41,43 +86,34 @@ section {
   color: white;
   text-align: center;
   font-weight: bold;
-  line-height: 2em; }
-  .lead-title .fa {
-    float: left;
-    margin-right: -1em; }
+  line-height: 2em;
+}
 
-.lead p {
-  margin: .5em 10%;
-  font-weight: bold;
-  line-height: 1.5em; }
+/* line 94, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
+.lead .title .fa {
+  float: left;
+  margin-right: -1em;
+}
 
+/* line 101, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
 .responsive {
-  max-width: 50vw; }
+  max-width: 50vw;
+}
 
+/* line 105, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
 .center {
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
-.goto {
-  height: 3em;
-  background-color: #255791;
-  text-align: center; }
-  .goto span {
-    display: block;
-    margin: 0 auto;
-    height: inherit;
-    color: white;
-    text-align: center;
-    font-weight: bold;
-    line-height: 3em; }
-    .goto span .fa {
-      float: left;
-      margin-left: .5em; }
-
+/* line 110, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
 .slide-content {
-  background: linear-gradient(0, rgba(10, 10, 10, 0.4), transparent); }
+  background: linear-gradient(0, rgba(10, 10, 10, 0.4), transparent);
+}
 
+/* line 114, E:/root/dev-env/timeCrashDisplay/sass/style.scss */
 .img-slide {
-  width: 30vmin; }
+  width: 30vmin;
+}
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=../style.map */

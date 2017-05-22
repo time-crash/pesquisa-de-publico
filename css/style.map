@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../sass/style.css",
+	"sources": [
+		"../sass/style.scss"
+	],
+	"sourcesContent": [
+		"@import 'font-awesome.min.css';\n@import url('https://fonts.googleapis.com/css?family=Open+Sans');\n\n$marine: #003874;\n$orange: #f47421;\n$cyan: #7fc6c3;\n$pink: #e094bf;\n$blue: #255791;\n\n$lightblue: rgba(77,199,196, 1);\n\n$black: #222;\n$white: #ddd;\n\n.shardbg, body {\n}\n\nbody{\n\tfont-family: 'Open Sans', sans-serif;\n\tbackground-image: url('../_imgs/shardsSmall.png');\n\tbackground-image: url('../_imgs/shardsSmall.png'), linear-gradient(0, #FFEEE2, #fff);\n\tbackground-attachment: fixed;\n\tbackground-position: left bottom;\n\tbackground-size: contain;\n\tbackground-repeat: no-repeat;\n\tcolor: $black;\n\tmargin: 0;\n}\n\n.content {\n\th1 {\n\t\tmargin-top: 0;\n\t\tmargin-left: 0.83em;\n\t\tpadding-top: 0.83em;\n\t}\n}\n\n.lead {\n\tp {\n\t\tmargin: .5em 10%;\n\t\tfont-weight: bold;\n\t\tline-height: 1.5em;\n\t}\n\n\t.title {\n\t\tdisplay: block;\n\t\tmargin: 0 auto;\n\t\tpadding: 0.6em;\n\t\tpadding-left: 1em;\n\t\theight: 2em;\n\t\twidth: 80%;\n\t\tborder-radius: 1.5em;\n\t\tbackground-color: $blue;\n\t\tcolor: white;\n\t\ttext-align: center;\n\t\tfont-weight: bold;\n\t\tline-height: 2em;\n\n\t\t.fa {\n\t\t\tfloat: left;\n\t\t\tmargin-right: -1em;\n\t\t}\n\t}\n}\n\n.responsive {\n\tmax-width: 50vw;\n}\n\n.center {\n\tdisplay: block;\n\tmargin: 0 auto;\n}\n\n.img-slide{\n\twidth: 30vmin;\n}\n"
+	],
+	"mappings": "AAAA,OAAO,CAAP,yBAAO;AACP,OAAO,CAAC,wDAAI;;AAgBZ,AAAA,IAAI,CAAA;EACH,WAAW,EAAE,uBAAwB;EACrC,gBAAgB,EAAE,+BAAG;EACrB,gBAAgB,EAAE,+BAAG,EAA8B,iCAAe;EAClE,qBAAqB,EAAE,KAAM;EAC7B,mBAAmB,EAAE,WAAY;EACjC,eAAe,EAAE,OAAQ;EACzB,iBAAiB,EAAE,SAAU;EAC7B,KAAK,EAdE,IAAI;EAeX,MAAM,EAAE,CAAE;CACV;;;AAED,AACC,QADO,CACP,EAAE,CAAC;EACF,UAAU,EAAE,CAAE;EACd,WAAW,EAAE,MAAO;EACpB,WAAW,EAAE,MAAO;CACpB;;;AAGF,AACC,KADI,CACJ,CAAC,CAAC;EACD,MAAM,EAAE,QAAS;EACjB,WAAW,EAAE,IAAK;EAClB,WAAW,EAAE,KAAM;CACnB;;;AALF,AAOC,KAPI,CAOJ,MAAM,CAAC;EACN,OAAO,EAAE,KAAM;EACf,MAAM,EAAE,MAAO;EACf,OAAO,EAAE,KAAM;EACf,YAAY,EAAE,GAAI;EAClB,MAAM,EAAE,GAAI;EACZ,KAAK,EAAE,GAAI;EACX,aAAa,EAAE,KAAM;EACrB,gBAAgB,EA7CX,OAAO;EA8CZ,KAAK,EAAE,KAAM;EACb,UAAU,EAAE,MAAO;EACnB,WAAW,EAAE,IAAK;EAClB,WAAW,EAAE,GAAI;CAMjB;;;AAzBF,AAqBE,KArBG,CAOJ,MAAM,CAcL,GAAG,CAAC;EACH,KAAK,EAAE,IAAK;EACZ,YAAY,EAAE,IAAK;CACnB;;;AAIH,AAAA,WAAW,CAAC;EACX,SAAS,EAAE,IAAK;CAChB;;;AAED,AAAA,OAAO,CAAC;EACP,OAAO,EAAE,KAAM;EACf,MAAM,EAAE,MAAO;CACf;;;AAED,AAAA,UAAU,CAAA;EACT,KAAK,EAAE,MAAO;CACd",
+	"names": []
+}

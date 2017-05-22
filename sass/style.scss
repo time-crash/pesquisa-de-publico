@@ -12,9 +12,6 @@ $lightblue: rgba(77,199,196, 1);
 $black: #222;
 $white: #ddd;
 
-.shardbg, body {
-}
-
 body{
 	font-family: 'Open Sans', sans-serif;
 	background-image: url('../imgs/shardsSmall.png');
@@ -36,7 +33,7 @@ body{
 }
 
 .lead {
-	p {
+	.body {
 		margin: .5em 10%;
 		font-weight: bold;
 		line-height: 1.5em;
@@ -60,6 +57,10 @@ body{
 			float: left;
 			margin-right: -1em;
 		}
+	}
+
+	& + .lead {
+		margin-top: 2em;
 	}
 }
 

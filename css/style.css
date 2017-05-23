@@ -6,12 +6,12 @@ body {
   margin: 0; }
 
 .content {
-  background-image: url("../imgs/shardsSmall.png");
   background-image: url("../imgs/shardsSmall.png"), linear-gradient(0, #FFEEE2, #fff);
   background-attachment: fixed;
   background-position: left bottom;
   background-size: contain;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 100%; }
   .content h1 {
     margin-top: 0;
     margin-left: 0.83em;

@@ -5,6 +5,9 @@ $(document).ready(function(){
 		adaptiveHeight: true,
 		autoplay: true,
 		autoplaySpeed: 3000,
+		mobileFirst: true,
+		prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-2x fa-angle-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="fa fa-2x fa-angle-right"></i></button>',
 	});
 });
 

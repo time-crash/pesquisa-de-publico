@@ -32,8 +32,9 @@ body {
   margin: 0 auto;
   max-width: 60%; }
 
-a[role='button'] {
+a[role='button'], button {
   display: block;
+  border: none;
   border-radius: 5px;
   background-color: #f47421;
   margin-top: .6em;
@@ -41,10 +42,18 @@ a[role='button'] {
   font-weight: 900;
   text-decoration: none;
   text-align: center; }
-  a[role='button'], a[role='button']:active, a[role='button']:visited, a[role='button']:hover, a[role='button']:focus {
+  a[role='button'], a[role='button']:active, a[role='button']:visited, a[role='button']:hover, a[role='button']:focus, button, button:active, button:visited, button:hover, button:focus {
     color: #ddd; }
-  a[role='button']:hover {
+  a[role='button']:hover, button:hover {
     text-decoration: underline; }
+
+form {
+  margin: .5em 10vw; }
+  form input[type='text'] {
+    width: calc(100% - 1em);
+    padding: .5em;
+    border: solid 1px #222;
+    border-radius: 5px; }
 
 /*components
  **************************************************************/

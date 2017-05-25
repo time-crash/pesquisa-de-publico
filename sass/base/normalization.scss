@@ -33,9 +33,10 @@ body{
 	}
 }
 
-a[role='button'] {
+a[role='button'], button {
 	display: block;
-	border-radius: 5px;
+	border: none;
+	border-radius: $elem-border-rad;
 	background-color: $orange;
 	margin-top: .6em;
 	padding: .5em;
@@ -48,5 +49,16 @@ a[role='button'] {
 	}
 	&:hover{
 		text-decoration: underline;
+	}
+}
+
+form {
+	margin: .5em 10vw;
+
+	input[type='text'] {
+		width: calc(100% - 1em);
+		padding: .5em;
+		border: solid 1px $black;
+		border-radius: $elem-border-rad;
 	}
 }

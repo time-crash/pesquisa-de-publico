@@ -7,22 +7,8 @@
 			width: initial;
 		}
 
-		a {
-			display: block;
-			border-radius: 5px;
-			background-color: $blue;
-			margin-top: .5em;
-			padding: .5em;
-			font-weight: 900;
-			text-decoration: none;
-			text-align: center;
-
-			&,&:active,&:visited,&:hover,&:focus {
-				color: $white;
-			}
-			&:hover{
-				text-decoration: underline;
-			}
+		a[role='button'] {
+			margin-top: .6em;
 		}
 	}
 
@@ -70,5 +56,9 @@
 			top: 0;
 			left: 90%;
 		}
+	}
+
+	* {
+		outline: none;
 	}
 }

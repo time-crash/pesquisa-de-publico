@@ -2,7 +2,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	color: $black;
 	margin: 0;
-	padding-bottom: $nav-width;
+	padding-bottom: $nav-height + 1em;
 }
 
 .bg {
@@ -30,5 +30,23 @@ body{
 		display: block;
 		margin: 0 auto;
 		max-width: 60%;
+	}
+}
+
+a[role='button'] {
+	display: block;
+	border-radius: 5px;
+	background-color: $orange;
+	margin-top: .6em;
+	padding: .5em;
+	font-weight: 900;
+	text-decoration: none;
+	text-align: center;
+
+	&,&:active,&:visited,&:hover,&:focus {
+		color: $white;
+	}
+	&:hover{
+		text-decoration: underline;
 	}
 }

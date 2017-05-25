@@ -21,6 +21,8 @@
 
 		.fa {
 			float: left;
+		}
+		&.div-centered .fa {
 			margin-right: -1em;
 		}
 	}

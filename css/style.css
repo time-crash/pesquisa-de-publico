@@ -124,6 +124,7 @@ form {
   outline: none; }
 
 nav {
+  z-index: 2;
   position: fixed;
   bottom: 0;
   left: 0;

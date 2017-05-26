@@ -15,7 +15,7 @@ body {
   position: fixed;
   background-image: url("../imgs/shardsSmall.png"), linear-gradient(0, #FFEEE2, #fff);
   background-attachment: fixed;
-  background-position: left bottom;
+  background-position: left calc(100% - 4em);
   background-size: contain;
   background-repeat: no-repeat;
   width: 100vw;
@@ -112,8 +112,9 @@ form {
 .slick-slider .slick-arrow {
   position: absolute;
   z-index: 1;
-  background: initial;
   border: initial;
+  background: initial;
+  color: #222;
   height: 100%;
   width: 10%; }
   .slick-slider .slick-arrow.slick-next {
@@ -126,7 +127,6 @@ nav {
   position: fixed;
   bottom: 0;
   left: 0;
-  display: block;
   height: 4em;
   width: 100vw;
   box-shadow: 0 -1px 3px #222;
@@ -147,5 +147,9 @@ nav {
   nav a, nav a:active, nav a:visited, nav a:hover, nav a:focus {
     color: white;
     text-decoration: none; }
+
+.loading {
+  margin-top: calc(50vh - 4em);
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,7 +10,7 @@ body{
 	position: fixed;
 	background-image: url('../imgs/shardsSmall.png'), linear-gradient(0, #FFEEE2, #fff);
 	background-attachment: fixed;
-	background-position: left bottom;
+	background-position: left calc(100% - #{$nav-height});
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 100vw;

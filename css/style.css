@@ -42,10 +42,15 @@ a[role='button'], button {
   font-weight: 900;
   text-decoration: none;
   text-align: center; }
-  a[role='button'], a[role='button']:active, a[role='button']:visited, a[role='button']:hover, a[role='button']:focus, button, button:active, button:visited, button:hover, button:focus {
+  a[role='button'], button, a[role='button']:active, button:active, a[role='button']:visited, button:visited, a[role='button']:hover, button:hover, a[role='button']:focus, button:focus {
     color: #222; }
   a[role='button']:hover, button:hover {
     text-decoration: underline; }
+
+button {
+  font-family: 'Open Sans', sans-serif;
+  line-height: inherit;
+  font-size: inherit; }
 
 form {
   margin: .5em 10vw; }
@@ -86,7 +91,7 @@ form {
   width: 80%; }
   .slick-slider .slick-slide * p, .slick-slider .slick-slide * h2, .slick-slider .slick-slide * a {
     width: initial; }
-  .slick-slider .slick-slide * a[role='button'] {
+  .slick-slider .slick-slide * a[role='button'], .slick-slider .slick-slide * button {
     margin-top: .6em; }
 .slick-slider .slick-dots {
   list-style-type: none;

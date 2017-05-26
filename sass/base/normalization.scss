@@ -33,7 +33,7 @@ body{
 	}
 }
 
-a[role='button'], button {
+a[role='button'] {
 	display: block;
 	border: none;
 	border-radius: $elem-border-rad;
@@ -50,6 +50,12 @@ a[role='button'], button {
 	&:hover{
 		text-decoration: underline;
 	}
+}
+button {
+	@extend a[role='button'];
+	font-family: 'Open Sans', sans-serif;
+	line-height: inherit;
+	font-size: inherit;
 }
 
 form {

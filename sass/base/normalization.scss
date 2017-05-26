@@ -37,7 +37,7 @@ a[role='button'], button {
 	display: block;
 	border: none;
 	border-radius: $elem-border-rad;
-	background-color: $orange;
+	background-color: darken($cyan, 16%);
 	margin-top: .6em;
 	padding: .5em;
 	font-weight: 900;
@@ -45,7 +45,7 @@ a[role='button'], button {
 	text-align: center;
 
 	&,&:active,&:visited,&:hover,&:focus {
-		color: $white;
+		color: $black;
 	}
 	&:hover{
 		text-decoration: underline;

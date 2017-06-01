@@ -64,6 +64,8 @@ form {
 	input[type='email'] {
 		width: calc(100% - 1em);
 		padding: .5em;
+		line-height: inherit;
+		font-size: inherit;
 		border: solid 1px $black;
 		border-radius: $elem-border-rad;
 	}

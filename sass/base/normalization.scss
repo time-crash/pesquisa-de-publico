@@ -2,7 +2,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	color: $black;
 	margin: 0;
-	padding-bottom: $nav-height + 1em;
+	padding-bottom: $nav-size + 1em;
 }
 
 .bg {
@@ -10,19 +10,23 @@ body{
 	position: fixed;
 	background-image: url('../imgs/shardsSmall.png'), linear-gradient(0, #FFEEE2, #fff);
 	background-attachment: fixed;
-	background-position: left calc(100% - #{$nav-height});
+	background-position: left calc(100% - #{$nav-size});
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	bottom: 0;
 	left: 0;
+
+	@media screen and (min-width: 912px) {
+		background-position: calc(#{$nav-size} * 2) bottom;
+	}
 }
 
 .content {
 	h1 {
 		margin-top: 0;
-		margin-left: 0.83em;
+		margin-left: 10%;
 		padding-top: 0.83em;
 	}
 
@@ -30,6 +34,31 @@ body{
 		display: block;
 		margin: 0 auto;
 		max-width: 60%;
+	}
+
+	@media screen and (min-width: 912px) {
+		float: right;
+		width: calc(100% - #{$nav-size} * 2);
+		padding-bottom: 2em;
+
+		.md-left{
+			position: fixed;
+			display: flex;
+			align-items: center;
+			flex-flow: column nowrap;
+			width: 50%;
+			height: 100%;
+			float: left;
+
+			h1{
+				align-self: start;
+				font-size: 2em;
+			}
+		}
+		.md-right{
+			width: 50%;
+			float: right;
+		}
 	}
 }
 
@@ -60,7 +89,7 @@ button {
 }
 
 .form {
-	margin: .5em 10vw;
+	margin: .5em 10%;
 
 	input[type='email'] {
 		box-sizing: border-box;

@@ -18,19 +18,41 @@ body {
   background-position: left calc(100% - 4em);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   bottom: 0;
   left: 0; }
+  @media screen and (min-width: 912px) {
+    .bg {
+      background-position: calc(4em * 2) bottom; } }
 
 .content h1 {
   margin-top: 0;
-  margin-left: 0.83em;
+  margin-left: 10%;
   padding-top: 0.83em; }
 .content img {
   display: block;
   margin: 0 auto;
   max-width: 60%; }
+@media screen and (min-width: 912px) {
+  .content {
+    float: right;
+    width: calc(100% - 4em * 2);
+    padding-bottom: 2em; }
+    .content .md-left {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      flex-flow: column nowrap;
+      width: 50%;
+      height: 100%;
+      float: left; }
+      .content .md-left h1 {
+        align-self: start;
+        font-size: 2em; }
+    .content .md-right {
+      width: 50%;
+      float: right; } }
 
 a[role='button'], button {
   display: block;
@@ -54,7 +76,7 @@ button {
   font-size: inherit; }
 
 .form {
-  margin: .5em 10vw; }
+  margin: .5em 10%; }
   .form input[type='email'] {
     box-sizing: border-box;
     font: inherit;
@@ -150,17 +172,31 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center; }
-  nav ul li {
+  nav ul a {
     float: left;
-    width: calc(100vw / 3); }
+    width: calc(100% / 3); }
   nav a, nav a:active, nav a:visited, nav a:hover, nav a:focus {
     color: white;
     text-decoration: none; }
+  @media screen and (min-width: 912px) {
+    nav {
+      width: calc(4em * 2);
+      height: 100%; }
+      nav ul {
+        flex-flow: column nowrap; }
+      nav ul a {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        float: left;
+        width: 100%;
+        height: calc(100% / 3); } }
 
 .loading {
   margin-top: calc(50vh - 4em);

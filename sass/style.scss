@@ -6,9 +6,11 @@
  **************************************************************/
 @import 'base/variables';
 @import 'base/normalization';
+@import 'base/ids';
 /*components
  **************************************************************/
 @import 'components/lead';
 @import 'components/slick-slider';
 @import 'components/nav';
 @import 'components/loading';
+@import 'components/message';

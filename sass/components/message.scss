@@ -1,0 +1,19 @@
+.message {
+	display: inline-block;
+	border: 1px solid transparent;
+	border-radius: $elem-border-rad;
+	float: right;
+	margin-top: .6em;
+	padding: .5em;
+
+	&.success {
+		$color: #4BB543;
+		border-color: $color;
+		background-color: lighten($color, 45%);
+	}
+	&.error {
+		$color: #D8000C;
+		border-color: $color;
+		background-color: lighten($color, 45%);
+	}
+}

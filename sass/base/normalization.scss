@@ -35,7 +35,8 @@ body{
 
 a[role='button'] {
 	display: block;
-	border: none;
+	cursor: pointer;
+	border: 1px solid transparent;
 	border-radius: $elem-border-rad;
 	background-color: darken($cyan, 16%);
 	margin-top: .6em;
@@ -58,11 +59,13 @@ button {
 	font-size: inherit;
 }
 
-form {
+.form {
 	margin: .5em 10vw;
 
 	input[type='email'] {
-		width: calc(100% - 1em);
+		box-sizing: border-box;
+		font: inherit;
+		width: 100%;
 		padding: .5em;
 		line-height: inherit;
 		font-size: inherit;

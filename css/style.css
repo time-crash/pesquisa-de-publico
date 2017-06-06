@@ -4,15 +4,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 /*Base
  **************************************************************/
-/* line 1, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
 body {
   font-family: 'Open Sans', sans-serif;
   color: #222;
   margin: 0;
-  padding-bottom: 5em;
-}
+  padding-bottom: 5em; }
 
-/* line 8, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
 .bg {
   z-index: -1;
   position: fixed;
@@ -24,78 +21,59 @@ body {
   width: 100vw;
   height: 100vh;
   bottom: 0;
-  left: 0;
-}
+  left: 0; }
 
-/* line 23, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
 .content h1 {
   margin-top: 0;
   margin-left: 0.83em;
-  padding-top: 0.83em;
-}
-
-/* line 29, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
+  padding-top: 0.83em; }
 .content img {
   display: block;
   margin: 0 auto;
-  max-width: 60%;
-}
+  max-width: 60%; }
 
-/* line 36, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
 a[role='button'], button {
   display: block;
-  border: none;
+  cursor: pointer;
+  border: 1px solid transparent;
   border-radius: 5px;
   background-color: #4ba8a4;
   margin-top: .6em;
   padding: .5em;
   font-weight: 900;
   text-decoration: none;
-  text-align: center;
-}
+  text-align: center; }
+  a[role='button'], button, a[role='button']:active, button:active, a[role='button']:visited, button:visited, a[role='button']:hover, button:hover, a[role='button']:focus, button:focus {
+    color: #222; }
+  a[role='button']:hover, button:hover {
+    text-decoration: underline; }
 
-/* line 47, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
-a[role='button'], button, a[role='button']:active, button:active, a[role='button']:visited, button:visited, a[role='button']:hover, button:hover, a[role='button']:focus, button:focus {
-  color: #222;
-}
-
-/* line 50, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
-a[role='button']:hover, button:hover {
-  text-decoration: underline;
-}
-
-/* line 54, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
 button {
   font-family: 'Open Sans', sans-serif;
   line-height: inherit;
-  font-size: inherit;
-}
+  font-size: inherit; }
 
-/* line 61, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
-form {
-  margin: .5em 10vw;
-}
+.form {
+  margin: .5em 10vw; }
+  .form input[type='email'] {
+    box-sizing: border-box;
+    font: inherit;
+    width: 100%;
+    padding: .5em;
+    line-height: inherit;
+    font-size: inherit;
+    border: solid 1px #222;
+    border-radius: 5px; }
 
-/* line 64, J:/root/dev-env/timeCrashDisplay/sass/base/normalization.scss */
-form input[type='email'] {
-  width: calc(100% - 1em);
-  padding: .5em;
-  line-height: inherit;
-  font-size: inherit;
-  border: solid 1px #222;
-  border-radius: 5px;
-}
+#btnSubmit {
+  display: inline-block; }
 
 /*components
  **************************************************************/
-/* line 2, J:/root/dev-env/timeCrashDisplay/sass/components/lead.scss */
 .lead .body {
   margin: .5em 10%;
   font-weight: bold;
-  line-height: 1.5em;
-}
-
-/* line 8, J:/root/dev-env/timeCrashDisplay/sass/components/lead.scss */
+  line-height: 1.5em; }
 .lead .title {
   display: block;
   margin: 0 auto;
@@ -108,77 +86,42 @@ form input[type='email'] {
   color: white;
   text-align: center;
   font-weight: bold;
-  line-height: 2em;
-}
-
-/* line 22, J:/root/dev-env/timeCrashDisplay/sass/components/lead.scss */
-.lead .title .fa {
-  float: left;
-}
-
-/* line 25, J:/root/dev-env/timeCrashDisplay/sass/components/lead.scss */
-.lead .title.div-centered .fa {
-  margin-right: -1em;
-}
-
-/* line 30, J:/root/dev-env/timeCrashDisplay/sass/components/lead.scss */
+  line-height: 2em; }
+  .lead .title .fa {
+    float: left; }
+  .lead .title.div-centered .fa {
+    margin-right: -1em; }
 .lead + .lead {
-  margin-top: 2em;
-}
+  margin-top: 2em; }
 
-/* line 2, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
 .slick-slider .slick-slide * {
   margin: 0 auto;
-  width: 80%;
-}
-
-/* line 6, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
-.slick-slider .slick-slide * p, .slick-slider .slick-slide * h2, .slick-slider .slick-slide * a {
-  width: initial;
-}
-
-/* line 10, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
-.slick-slider .slick-slide * a[role='button'], .slick-slider .slick-slide * button {
-  margin-top: .6em;
-}
-
-/* line 15, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
+  width: 80%; }
+  .slick-slider .slick-slide * p, .slick-slider .slick-slide * h2, .slick-slider .slick-slide * a {
+    width: initial; }
+  .slick-slider .slick-slide * a[role='button'], .slick-slider .slick-slide * button {
+    margin-top: .6em; }
 .slick-slider .slick-dots {
   list-style-type: none;
   margin: .5em 0 0;
   padding: 0;
-  text-align: center;
-}
-
-/* line 21, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
-.slick-slider .slick-dots li {
-  display: inline-block;
-}
-
-/* line 24, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
-.slick-slider .slick-dots li button {
-  background: initial;
-  border: initial;
-  color: transparent;
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* line 35, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
-.slick-slider .slick-dots li button:before {
-  color: #222;
-  content: "\f10c";
-}
-
-/* line 41, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
-.slick-slider .slick-dots li.slick-active button:before {
-  content: "\f111";
-}
-
-/* line 47, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
+  text-align: center; }
+  .slick-slider .slick-dots li {
+    display: inline-block; }
+    .slick-slider .slick-dots li button {
+      background: initial;
+      border: initial;
+      color: transparent;
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+      .slick-slider .slick-dots li button:before {
+        color: #222;
+        content: "\f10c"; }
+    .slick-slider .slick-dots li.slick-active button:before {
+      content: "\f111"; }
 .slick-slider .slick-arrow {
   position: absolute;
   z-index: 1;
@@ -186,21 +129,13 @@ form input[type='email'] {
   background: initial;
   color: #222;
   height: 100%;
-  width: 10%;
-}
-
-/* line 56, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
-.slick-slider .slick-arrow.slick-next {
-  top: 0;
-  left: 90%;
-}
-
-/* line 62, J:/root/dev-env/timeCrashDisplay/sass/components/slick-slider.scss */
+  width: 10%; }
+  .slick-slider .slick-arrow.slick-next {
+    top: 0;
+    left: 90%; }
 .slick-slider * {
-  outline: none;
-}
+  outline: none; }
 
-/* line 1, J:/root/dev-env/timeCrashDisplay/sass/components/nav.scss */
 nav {
   z-index: 2;
   position: fixed;
@@ -210,37 +145,39 @@ nav {
   width: 100vw;
   box-shadow: 0 -1px 3px #222;
   background-color: #003874;
-  color: white;
-}
+  color: white; }
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center; }
+  nav ul li {
+    float: left;
+    width: calc(100vw / 3); }
+  nav a, nav a:active, nav a:visited, nav a:hover, nav a:focus {
+    color: white;
+    text-decoration: none; }
 
-/* line 12, J:/root/dev-env/timeCrashDisplay/sass/components/nav.scss */
-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
-/* line 23, J:/root/dev-env/timeCrashDisplay/sass/components/nav.scss */
-nav ul li {
-  float: left;
-  width: calc(100vw / 3);
-}
-
-/* line 28, J:/root/dev-env/timeCrashDisplay/sass/components/nav.scss */
-nav a, nav a:active, nav a:visited, nav a:hover, nav a:focus {
-  color: white;
-  text-decoration: none;
-}
-
-/* line 1, J:/root/dev-env/timeCrashDisplay/sass/components/loading.scss */
 .loading {
   margin-top: calc(50vh - 4em);
-  text-align: center;
-}
+  text-align: center; }
 
-/*# sourceMappingURL=../css/style.map */
+.message {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  float: right;
+  margin-top: .6em;
+  padding: .5em; }
+  .message.success {
+    border-color: #4BB543;
+    background-color: #e8f6e7; }
+  .message.error {
+    border-color: #D8000C;
+    background-color: #ffbfc2; }
+
+/*# sourceMappingURL=style.css.map */

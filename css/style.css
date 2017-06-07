@@ -239,4 +239,24 @@ nav {
     border-color: #D8000C;
     background-color: #ffbfc2; }
 
+.flexteam .lead {
+  clear: both; }
+.flexteam .lead img {
+  width: 50%;
+  float: left;
+  margin-right: .6em;
+  margin-bottom: 2em; }
+@media screen and (min-width: 767px) {
+  .flexteam {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center; }
+    .flexteam .lead {
+      width: 50%; }
+      .flexteam .lead img {
+        margin-bottom: 0; }
+    .flexteam .lead:first-child {
+      margin-top: 2em; } }
+
 /*# sourceMappingURL=style.css.map */

@@ -35,12 +35,31 @@
 				&:before {
 					color: $black;
 					content: "\f10c";
+					display: block;
+					width: 2em;
+					height: 1em;
 				}
 			}
 
 			&.slick-active button:before {
 				content: "\f111";
 			}
+		}
+	}
+
+	.img-slide {
+		@media screen and (min-width: 912px) {
+			margin-left: 10%;
+			width: 40%;
+			float: left;
+		}
+	}
+
+	.slide-content {
+		@media screen and (min-width: 912px) {
+			padding: .6em;
+			width: 40%;
+			float: left;
 		}
 	}
 
@@ -63,5 +82,9 @@
 		outline: none;
 	}
 
-	@media screen and (min-width: 912px) {}
+	@media screen and (min-width: 1090px){
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 977px;
+	}
 }

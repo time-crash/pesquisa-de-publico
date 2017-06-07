@@ -4,10 +4,11 @@
 	}
 
 	.lead img {
-		width: 50%;
-		float: left;
-		margin-right: .6em;
-		margin-bottom: 2em;
+		margin: .6em auto;
+	}
+
+	.lead p {
+		text-align: center;
 	}
 
 	@media screen and (min-width: 767px) {
@@ -17,11 +18,7 @@
 		align-items: center;
 
 		.lead {
-			width: 50%;
-
-			img {
-				margin-bottom: 0;
-			}
+			width: calc(100% / 3);
 		}
 
 		.lead:first-child{

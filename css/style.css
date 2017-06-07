@@ -242,10 +242,9 @@ nav {
 .flexteam .lead {
   clear: both; }
 .flexteam .lead img {
-  width: 50%;
-  float: left;
-  margin-right: .6em;
-  margin-bottom: 2em; }
+  margin: .6em auto; }
+.flexteam .lead p {
+  text-align: center; }
 @media screen and (min-width: 767px) {
   .flexteam {
     display: flex;
@@ -253,9 +252,7 @@ nav {
     justify-content: space-between;
     align-items: center; }
     .flexteam .lead {
-      width: 50%; }
-      .flexteam .lead img {
-        margin-bottom: 0; }
+      width: calc(100% / 3); }
     .flexteam .lead:first-child {
       margin-top: 2em; } }
 

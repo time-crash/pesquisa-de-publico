@@ -37,7 +37,11 @@ var submitToFirebase = function(){
 
 	self.database.ref().update(updates);
 	displaySuccess();
-	setTimeout(dismissAll, 3000);
+	document.getElementById('edtEmail').value='';
+
+	setTimeout(function(){
+		dismissAll();
+	}, 3000);
 };
 
 var displaySuccess = function(){

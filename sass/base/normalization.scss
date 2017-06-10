@@ -23,8 +23,8 @@ body{
 	}
 }
 
-.nonbreak {
-	display: inline-block;
+.biolink {
+	word-break: break-all;
 }
 
 .content {

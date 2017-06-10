@@ -26,8 +26,8 @@ body {
     .bg {
       background-position: calc(4em * 2) bottom; } }
 
-.nonbreak {
-  display: inline-block; }
+.biolink {
+  word-break: break-all; }
 
 .content h1 {
   margin-top: 0;

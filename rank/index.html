@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ranking - Time Crash</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#003874">
+		<meta name="theme-color" content="#003874">
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+	</head>
+	<body>
+		<div class='bg'></div>
+		<nav>
+			<ul>
+				<a href='../index.html'><li><i class='fa fa-lg fa-info-circle fa-inverted'></i><br />Home</li></a>
+				<a href='../team/index.html'><li><i class='fa fa-lg fa-id-card-o fa-inverted'></i><br />Conheça-nos</li></a>
+				<a href='../chars/index.html'><li><i class='fa fa-lg fa-user-o fa-inverted'></i><br />Personagens</li></a>
+			</ul>
+		</nav>
+		<section class="content">
+			<div class='loading'>
+				<i class="fa fa-circle-o-notch fa-spin fa-4x fa-fw"></i>
+				<span class="sr-only">Carregando...</span>
+				<p>Isso deve demorar alguns segundos;<br />se demorar mais, por favor, recarregue a página</p>
+			</div>
+
+			<h1 class='hide'>Ranking do jogo</h1>
+
+			<ol id="rank">
+			</ol>
+		</section>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+		<script src="../scripts/firebaseInit.js"></script>
+		<script src="../scripts/tmpl.js"></script>
+		<script src="../scripts/fb-readRank.js"></script>
+		<!--ranking entry template-->
+		<script type="text/html" id="entry_tmpl">
+		<li class="entry">
+			<div class="user"><%=userUID%></div>
+			<p>Playtime: <span class="playtime"><%=(displayPlaytime(playtime))%></span><br>
+			Orbs: <span class="orbs"><%=orbs%></span></p>
+			<span class="date"><%=(new Date(whenWasPlayed).toLocaleString())%></span>
+		</li>
+		</script>
+	</body>
+</html>

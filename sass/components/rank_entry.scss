@@ -1,0 +1,18 @@
+#rank .entry{
+	clear: both;
+	padding-top: 1em;
+	padding-right: 1em;
+
+	.user{
+		font-weight: bold;
+		font-size: 1.1em;
+		margin-bottom: .3em;
+	}
+	.date{
+		float: right;
+		margin-top: 0;
+	}
+	p{
+		margin: 0 0;
+	}
+}

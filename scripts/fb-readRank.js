@@ -34,9 +34,4 @@ function loadDone(){
 	while(hidden.length > 0){
 		hidden[0].classList.remove('hide');
 	}
-
-	self.database.ref().child('plays')
-		.on('child_added', function(snap){
-			window.location.reload(true);
-		});
 }

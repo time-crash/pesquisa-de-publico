@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function(event) {
+	let i = 0;
 	self.database.ref().child('plays')
-		.orderByChild('playtime').limitToFirst(20).on('child_added', function(snap){
-			createEntry(snap);
-
+		.orderByChild('playtime').limitToFirst(20).once("value").then(function(snap){
+			snap.forEach(function(childSnap){
+				createEntry(snap);
+			});
 			loadDone();
 		});
 });
@@ -32,4 +34,9 @@ function loadDone(){
 	while(hidden.length > 0){
 		hidden[0].classList.remove('hide');
 	}
+
+	self.database.ref().child('plays')
+		.on('child_added', function(snap){
+			window.location.reload(true);
+		});
 }

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	self.database.ref().child('plays')
 		.orderByChild('playtime').limitToFirst(20).once("value").then(function(snap){
 			snap.forEach(function(childSnap){
-				createEntry(snap);
+				createEntry(childSnap);
 			});
 			loadDone();
 		});
